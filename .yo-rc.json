@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Wisu Suntoyo",
+      "authorEmail": "bigwisu@gmail.com",
+      "authorUrl": "https://bigwisu.com"
+    }
+  }
+}
