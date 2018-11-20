@@ -5,23 +5,21 @@ const yosay = require('yosay');
 
 module.exports = class extends Generator {
   prompting() {
-    this.log(
-      yosay(`Satu dua tiga... Welcome to ${chalk.red('generator-tuwaga')}!`)
-    );
+    this.log(yosay(`Satu dua tiga... Welcome to ${chalk.red('generator-tuwaga')}!`));
 
     const prompts = [
       {
         type: 'input',
         name: 'serviceApiName',
-        message: 'What\'s the service name?',
+        message: "What's the service name?",
         default: 'new-service-api'
-      },      
+      },
       {
         type: 'input',
         name: 'swaggerUser',
         message: 'Set swagger docs user',
         default: 'developer'
-      },      
+      },
       {
         type: 'input',
         name: 'swaggerPassword',
@@ -57,7 +55,7 @@ module.exports = class extends Generator {
     copyTpl(tPath('controllers/api/index.js'), dPath('controllers/api/index.js'), props);
     copyTpl(tPath('controllers/api/ping.js'), dPath('controllers/api/ping.js'), props);
 
-    // this.fs.copy(
+    // This.fs.copy(
     //   this.templatePath('controllers'),
     //   this.destinationPath('controllers')
     // );
