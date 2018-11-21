@@ -52,8 +52,8 @@ module.exports = class extends Generator {
     copyTpl(tPath('views/index.ejs'), dPath('views/index.ejs'), props);
     copyTpl(tPath('tests/controllers.js'), dPath('tests/controllers.js'), props);
     copyTpl(tPath('controllers/index.js'), dPath('controllers/index.js'), props);
-    copyTpl(tPath('controllers/api/index.js'), dPath('controllers/api/index.js'), props);
-    copyTpl(tPath('controllers/api/ping.js'), dPath('controllers/api/ping.js'), props);
+    copyTpl(tPath('controllers/docs.js'), dPath('controllers/docs.js'), props);
+    copyTpl(tPath('controllers/ping.js'), dPath('controllers/ping.js'), props);
 
     // This.fs.copy(
     //   this.templatePath('controllers'),

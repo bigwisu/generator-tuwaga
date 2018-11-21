@@ -13,15 +13,24 @@ npm install -g generator-tuwaga
 Then generate your new project:
 
 ```bash
+mkdir service-api-name
 yo tuwaga
+npm install
 ```
 
-## Getting To Know Yeoman
+## Running
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+Once installed, app can be tried run by running
+
+```bash
+npm start
+```
+
+to access swagger API documentation by browser via url
+
+http://localhost:3000/service-api-name/docs
+
+login via username and password previously specified
 
 ## License
 

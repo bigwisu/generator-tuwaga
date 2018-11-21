@@ -1,7 +1,11 @@
-const config = require('../../config');
+const config = require('../config');
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const basicAuthModule = require('basic-auth');
+
+const apis = [
+  './controllers/ping.js',
+]
 
 function basicAuth() {
   return (req, res, next) => {
@@ -27,9 +31,7 @@ module.exports = (router) => {
         version: docVersion,
       },
     },
-    apis: [
-      './controllers/api/ping.js',
-    ],
+    apis,
   });
 
   const showExplorer = false;
@@ -39,7 +41,7 @@ module.exports = (router) => {
   const swaggerUrl = '';
 
   router.use(
-    '/docs',
+    '/',
     basicAuth(),
     swaggerUi.serve,
     swaggerUi.setup(
