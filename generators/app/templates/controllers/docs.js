@@ -1,11 +1,11 @@
-const config = require('../config');
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const basicAuthModule = require('basic-auth');
+const config = require('../config');
 
 const apis = [
   './controllers/ping.js',
-]
+];
 
 function basicAuth() {
   return (req, res, next) => {

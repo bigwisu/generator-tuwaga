@@ -1,13 +1,13 @@
-const config = require('./config');
 const path = require('path');
 const express = require('express');
 const enrouten = require('express-enrouten');
+const config = require('./config');
 
 /* eslint-disable no-console */
 
 const app = express();
 
-app.use('/<%= serviceApiName %>',enrouten({
+app.use('/<%= serviceApiRoot %>', enrouten({
   directory: path.join(__dirname, 'controllers'),
 }));
 

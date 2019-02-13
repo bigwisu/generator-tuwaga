@@ -1,7 +1,7 @@
 module.exports = (router) => {
   /**
    * @swagger
-   * /<%= serviceApiName %>/ping:
+   * <%- serviceApiRoot == '' ? '' : '/' + serviceApiRoot %>/ping:
    *   get:
    *     description: ping the Service API to get status
    *     produces:
@@ -19,4 +19,3 @@ module.exports = (router) => {
     res.json(data);
   });
 };
-

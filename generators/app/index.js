@@ -11,8 +11,20 @@ module.exports = class extends Generator {
       {
         type: 'input',
         name: 'serviceApiName',
-        message: "What's the service name?",
-        default: 'new-service-api'
+        message: "What's the service api name?",
+        default: 'Satu Dua Tiga...'
+      },
+      {
+        type: 'input',
+        name: 'serviceApiPackageName',
+        message: "How do we define this service api's package name?",
+        default: 'satu-dua-tiga'
+      },
+      {
+        type: 'input',
+        name: 'serviceApiRoot',
+        message: "What's the service api's root?",
+        default: ''
       },
       {
         type: 'input',
